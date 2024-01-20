@@ -2,6 +2,7 @@
 *Este jogo é uma inspiração no filme black mirror: bandersnatch*
 ---
 *Jogo irá conter:*
+- Gênero: Suspense & Mistério
 - Interatividade;
 - Tipo 2D;
 - Estilo Pixel Art;
