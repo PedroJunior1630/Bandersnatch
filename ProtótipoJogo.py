@@ -9,21 +9,36 @@ def limpa():
 
 
 def linha(tipo="=+=",tam=30):
-    print("\033[1;36m")
+    print("\033[1;32m")
     print(tipo*tam)
 
 
+def telaMenu(*opcs):
+    print(f"""
+    -------------------------------------------------
+    /      B  A  N  D  E  R  S  N  A  T  C  H       
+    /
+    /   [ 1 ] - {opcs[0]}
+    /   [ 2 ] - {opcs[1]}
+    /   [ 3 ] - {opcs[2]}                           
+    /                                               
+    -------------------------------------------------
+    """)
+    
+
+
 def layoutQuadrado(msg):
-    letras = []
+    letras = ["",""]
     for i,letra in enumerate(msg):
-        letras.append(letra)
-        linha("---",30)
+        letras[0] = letras[0] + "  "+letra+"  "
+        linha("---",21)
         print("\033[1;97m")
-        print(f"{letras}")
+        print(f"{letras[0]}")
         print("\033[m")
-        linha("---",30)
-        tempo()
+        linha("---",21)
+        tempo(0.5)
         limpa()
+    telaMenu("JOGAR", "FINALIZAR JOGO", "SOBRE")
 
 
 def animaQuadros(fps=5):
