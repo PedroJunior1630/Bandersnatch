@@ -40,6 +40,7 @@ def leiaInt(msg):
             return a
 
 
+
 def telaMenu(*opcs):
     print(f"""
     -------------------------------------------------
@@ -52,23 +53,42 @@ def telaMenu(*opcs):
     -------------------------------------------------
     """)
     opc = leiaInt('Qual sua opção? ')
+    return opc
 
 
-def layoutQuadrado(msg):
+def layoutGame(msg):
     letras = ["",""]
-    for i,letra in enumerate(msg):
-        letras[0] = letras[0] + "  "+letra+"  "
+    for letra in msg:
+        letras[0] = letras[0] +  "  "+letra+"  "
+
         linha("---",21)
         print("\033[1;97m")
         print(f"{letras[0]}")
         print("\033[m")
         linha("---",21)
+        
         tempo(0.3)
         limpa()
-    telaMenu("JOGAR", "FINALIZAR JOGO", "SOBRE")
 
 
-def animaQuadros(fps=5):
-    layoutQuadrado("BANDERSNATCH")
+def comecaJogo():
+    pass
 
-animaQuadros()
+
+def finalizaJogo():
+    pass
+
+
+def mostraSobre():
+    pass
+
+
+layoutGame("BANDERSNATCH")
+menu = telaMenu("JOGAR", "FINALIZAR JOGO", "SOBRE")
+
+if menu == 1:
+    comecaJogo()
+elif menu == 2:
+    finalizaJogo()
+elif menu == 3:
+    mostraSobre()
