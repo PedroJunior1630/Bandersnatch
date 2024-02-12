@@ -13,6 +13,10 @@ def linha(tipo="=+=",tam=30,cor="\033[1;32m"):
     print(tipo*tam)
 
 
+def introGame():
+    pass
+
+
 def mensagemErro(msg):
     limpa()
     linha("=-=",20,cor="\033[1;31m")
@@ -38,7 +42,6 @@ def leiaInt(msg):
             mensagemErro("DIGITE NOVAMENTE!")
         else:
             return a
-
 
 
 def telaMenu(*opcs):
@@ -71,6 +74,10 @@ def layoutGame(msg):
         limpa()
 
 
+def tocaMusica():
+    pass
+
+
 def comecaJogo():
     pass
 
@@ -83,12 +90,17 @@ def mostraSobre():
     pass
 
 
+introGame()
 layoutGame("BANDERSNATCH")
 menu = telaMenu("JOGAR", "FINALIZAR JOGO", "SOBRE")
 
+
 if menu == 1:
     comecaJogo()
+
 elif menu == 2:
     finalizaJogo()
+
 elif menu == 3:
     mostraSobre()
+    
