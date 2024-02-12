@@ -1,8 +1,12 @@
 # Bandersnatch
 *Este jogo é uma inspiração no filme black mirror: bandersnatch*
 ---
-*Jogo irá conter:*
-- Gênero: Suspense & Mistério
+*Demo irá conter:*
+- Ascii Art;
+- Uso de python.
+---
+*Jogo oficial irá conter:*
+- Gênero: Suspense & Mistério;
 - Interatividade;
 - Tipo 2D;
 - Estilo Pixel Art;
