@@ -14,7 +14,14 @@ def linha(tipo="=+=",tam=30,cor="\033[1;32m"):
 
 
 def introGame():
-    pass
+    print("\033[1;32mBandersnatch")
+    tempo(1)
+    print("(c) PedroHDev Productions...")
+    tempo(2)
+    limpa()
+    print("\033[1;97mInspirado no filme Black Mirror Bandersnatch da Netflix.\033[m")
+    tempo(4)
+    limpa()
 
 
 def mensagemErro(msg):
@@ -63,24 +70,29 @@ def layoutGame(msg):
     letras = ["",""]
     for letra in msg:
         letras[0] = letras[0] +  "  "+letra+"  "
-
-        linha("---",21)
+        linha("---",30)
         print("\033[1;97m")
         print(f"{letras[0]}")
         print("\033[m")
-        linha("---",21)
+        linha("---",30)
         
-        tempo(0.3)
+        tempo(0.5)
         limpa()
 
 
-def tocaMusica():
-    pass
+def tocaMusica(nome):
+    from pygame import mixer
+    
+    mixer.init()
+
+    mixer.music.load('C:/Users/ph751/OneDrive/Documentos/MeusProjetos/Bandersnatch/Musicas/'+nome)
+
+    mixer.music.play()
 
 
 def comecaJogo():
-    pass
-
+    tocaMusica("Relax.mp3")
+    
 
 def finalizaJogo():
     pass
@@ -90,6 +102,8 @@ def mostraSobre():
     pass
 
 
+
+tocaMusica("Intro.mp3")
 introGame()
 layoutGame("BANDERSNATCH")
 menu = telaMenu("JOGAR", "FINALIZAR JOGO", "SOBRE")
@@ -103,4 +117,4 @@ elif menu == 2:
 
 elif menu == 3:
     mostraSobre()
-    
+
