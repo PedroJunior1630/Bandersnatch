@@ -90,9 +90,38 @@ def tocaMusica(nome):
     mixer.music.play()
 
 
+def comentario(msg,temp=1):
+    tam = len(msg) + 4
+    linha("=",tam)
+    print(f'{msg.center(tam)}  ')
+    linha("=",tam)
+    tempo(temp)
+    limpa()
+
+def fala(msg,pessoa,cor="\033[1;97m"):
+    print(cor)
+    print(f"{pessoa}: {msg}")
+    print("\033[m")
+
+
 def comecaJogo():
     tocaMusica("Relax.mp3")
-    
+    # Data 9/07/1984
+    # Quarto do stefan
+    # Exbir um relógio
+    comentario("Stefan acorda as 08:30 e se dirige ao banheiro para tomar seu remédio.",8)
+    tempo(5)
+    limpa()
+    # Remédio(Pilulas)
+    comentario("Stefan tome suas pilulas e lva seu rosto.")
+    tempo(3)
+    limpa()
+    # Exbir corredor 
+    # Exibir o pai do Stefan
+    fala("Café da manhã?","Pai","\033[1;33m")
+    # Exibir uma mesa
+    # Exibir o chá
+
 
 def finalizaJogo():
     pass
