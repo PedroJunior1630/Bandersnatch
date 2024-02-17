@@ -94,24 +94,34 @@ def tocaMusica(nome):
 def comentario(msg,temp=1):
     tam = len(msg) + 4
     linha("=",tam)
-    print(f'{msg.center(tam)}  ')
+    print("  ",end = "")
+    for letra in msg:
+        print(f'{letra}',end = "")
+        tempo(0.08)
+    print("  ")
     linha("=",tam)
     tempo(temp)
-    limpa()
+    print("")
 
 
-def fala(msg,pessoa,cor="\033[1;97m"):
-    print(cor)
-    print(f"{pessoa}: ",end="")
+def fala(msg,pessoa,temp=3):
+    print(f"\033[1;97m{pessoa}: \033[m",end="")
+    if pessoa.upper() == "PAI":
+        cor = "\033[1;33m"
+    elif pessoa.upper() == "STEFAN":
+        cor = "\033[1;32m"
+
+    print(cor,end= "")
     for letra in msg:
         print(f"{letra}",end="")
-        tempo(0.08)
+        tempo(0.06)
     print("\033[m")
+    tempo(temp)
+    print("")
 
 
 def escolha(op1="",op2=""):
-    esp
-    
+    pass
     
 
 
@@ -120,21 +130,77 @@ def comecaJogo():
     # Data 9/07/1984
     # Quarto do stefan
     # Exbir um relógio
-    comentario("Stefan acorda as 08:30 e se dirige ao banheiro para tomar seu remédio.",8)
-    tempo(5)
+    comentario("Stefan acorda as 08:30 e se dirige ao banheiro para tomar seu remédio.",5)
     limpa()
     # Remédio(Pilulas)
-    comentario("Stefan tome suas pilulas e lva seu rosto.")
-    tempo(3)
+    comentario("Stefan tome suas pilulas e lava seu rosto.",5)
     limpa()
     # Exbir corredor 
     # Exibir o pai do Stefan
-    fala("Café da manhã?","Pai","\033[1;33m")
+    comentario("Ele encontra seu pai ao sair do banheiro.",3)
+    limpa()
+
+    fala("Café da manhã?","Pai",2)
     #exibir o stefan
-    fala("Hum","Stefan","\033[1;32m")
+    fala("Hum","Stefan",1)
+    limpa()
     # Exibir uma mesa
     # Exibir o chá
-    fala("Obrigado Pai...","Pai","\033[1;33m")
+    comentario("Stefan está lendo seu livro sentado na mesa da cozinha.",5)
+
+    fala("Aqui está seu chá...","Pai",2)
+    comentario("...",2)
+    fala("Obrigado Pai...","Pai",2)
+
+    fala("Desculpa, eu tava distraído, eu preciso arrumar tudo pra hoje","Stefan")
+
+    fala("O pessoal que trabalha com computadores?","Pai")
+
+    fala("É...","Stefan",2)
+
+    fala("Da Tuckersoft, fazem os jogos do Colin Ritman","Stefan")
+
+    fala("Ah não! aquele Colin Ritman?! :O","Pai",2)
+
+    comentario("...",1)
+
+    fala("O Sr Thakur, o dono, disse que eu podia mostrar minha demo de Bandersnatch","Stefan")
+
+    fala("Bander-o quê?","Pai",2)
+
+    fala("Bandersnatch... É baseado nesse livro.","Stefan",2)
+
+    comentario('Stefan mostra o livro "Bandersnatch" para o pai',2)
+
+    fala("Era da sua mãe?","Pai",1)
+
+    fala("Estava nas coisas dela... :|","Stefan",2)
+
+    fala("Mas eu não acho que ela leu :|","Stefan",2)
+
+    fala("Eu acho que não... <:|","Pai",2)
+    
+    comentario("Seu pai olha pro livro....",2)
+
+    fala('"Jerome F Davies"... não deve ser muito bom escritor, você sempre está avançando e voltando este livro O-O',"Pai")
+
+    fala("Não é isso... É por que é interativo, estilo escolha sua aventura :|",1)
+
+    fala("Ham?","Pai",0.5)
+
+    fala("Você decide o que o personagem faz, tipo um jogo... :P","Stefan",1)
+
+    fala("Parece emocionante...","Pai",1)
+
+    fala("Que tal decidir o que quer de café da manhã?","Pai",1)
+
+    comentario("Seu pai te mostra duas caixas de cereais...",1)
+
+    fala("Os dois são infantis, mas você insiste...","Pai",1)
+
+    escolha("SUGAR PUFFS","SUCRILHOS")
+
+
     #exbir a mesa
        
 
