@@ -53,18 +53,25 @@ def leiaInt(msg):
 
 
 def telaMenu(*opcs):
+    import keyboard
     print(f"""
     -------------------------------------------------
     /      B  A  N  D  E  R  S  N  A  T  C  H       
-    /
-    /   [ 1 ] - {opcs[0]}
-    /   [ 2 ] - {opcs[1]}
-    /   [ 3 ] - {opcs[2]}                           
-    /                                               
+    /           ___________________
+    /   [ 1 ] - | {opcs[0]}           |
+    /           -------------------
+    /           ___________________
+    /   [ 2 ] - | {opcs[1]}           |
+    /           -------------------
+    /           ___________________
+    /   [ 3 ] - | {opcs[2]}  |                          
+    /           -------------------
     -------------------------------------------------
     """)
-    opc = leiaInt('Qual sua opção? ')
-    return opc
+    print("Clique no teclado númerico de acordo com as opções.")
+    while True:
+        if keyboard.is_pressed('1'):
+            return 1
 
 
 def layoutGame(msg):
@@ -125,8 +132,15 @@ def escolha(op1="",op2=""):
     
 
 
+def carregando():
+
+    
+
 def comecaJogo():
-    tocaMusica("Relax.mp3")
+    tempo(1)
+    limpa()
+    carregando()
+    tocaMusica("relax.mp3")
     # Data 9/07/1984
     # Quarto do stefan
     # Exbir um relógio
