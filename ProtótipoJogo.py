@@ -133,14 +133,27 @@ def escolha(op1="",op2=""):
 
 
 def carregando():
+    s = ">"
+    linha("=-=",10)
+    for c in range(10,110,10):
+        print("Carregando: ",end = "")
+        print(s,end ="",flush="True")
+        print(f" {c}%")
+        tempo(0.5)
+        limpa()
+        s = s + ">"
+        linha("=-=",10)
+    print("CARREGADO COM SUCESSO!")
+    tempo(4)
+    limpa()
 
-    
 
 def comecaJogo():
     tempo(1)
     limpa()
     carregando()
     tocaMusica("relax.mp3")
+    comentario("9 de Julho de 1984",2)
     # Data 9/07/1984
     # Quarto do stefan
     # Exbir um relógio
