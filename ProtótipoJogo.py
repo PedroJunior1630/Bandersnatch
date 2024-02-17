@@ -23,6 +23,7 @@ def introGame():
     print("Inspirado no filme Black Mirror Bandersnatch da Netflix.\033[m")
     tempo(4)
     limpa()
+    print("Aperte 'Enter' para pular abertura e começar o jogo")
 
 
 def mensagemErro(msg):
@@ -115,7 +116,7 @@ def comentario(msg,temp=1):
     print("")
 
 
-def fala(msg,pessoa,temp=3):
+def fala(msg,pessoa,temp=1.5):
     print(f"\033[1;97m{pessoa}: \033[m",end="")
     if pessoa.upper() == "PAI":
         cor = "\033[1;33m"
@@ -132,8 +133,38 @@ def fala(msg,pessoa,temp=3):
 
 
 def escolha(op1="",op2=""):
-    pass
+    import random
+    qntd = 46
+    esp = 1
     
+    for c in range(0,qntd):
+        if c % 2 == 1:
+            print(" " * esp, "_"*qntd)
+            esp += 1
+            qntd -= 1
+        else:
+            qntd -= 1
+            print(" "*esp,"_" * qntd)
+
+        if c == 35:
+            r = random.randint(1,2)
+            if r == 1:
+                print(f"\033[1;32m{op1:>10}\033[m",end = "")
+                print(f"{'|':>15}",end = "")
+                print(f"{op2:>15}")
+            else:
+                print(f"{op1:>10}",end = "")
+                print(f"{'|':>15}",end = "")
+                print(f"\033[1;32m{op2:>15}\033[m")
+                      
+            tempo(5)
+
+        else:
+            print(f"{op1:>10}",end = "")
+            print(f"{'|':>15}",end = "")
+            print(f"{op2:>15}")
+            tempo(0.2)
+            limpa()
 
 
 def carregando():
@@ -177,45 +208,45 @@ def comecaJogo():
     limpa()
     # Exibir uma mesa
     # Exibir o chá
-    comentario("Stefan está lendo seu livro sentado na mesa da cozinha.",5)
+    comentario("Stefan está lendo seu livro sentado na mesa da cozinha.")
 
-    fala("Aqui está seu chá...","Pai",2)
-    comentario("...",2)
-    fala("Obrigado Pai...","Pai",2)
+    fala("Aqui está seu chá...","Pai",1)
+    comentario("...",1)
+    fala("Obrigado Pai...","Pai",1)
 
     fala("Desculpa, eu tava distraído, eu preciso arrumar tudo pra hoje","Stefan")
 
     fala("O pessoal que trabalha com computadores?","Pai")
 
-    fala("É...","Stefan",2)
+    fala("É...","Stefan",1)
 
     fala("Da Tuckersoft, fazem os jogos do Colin Ritman","Stefan")
 
-    fala("Ah não! aquele Colin Ritman?! :O","Pai",2)
+    fala("Ah não! aquele Colin Ritman?! :O","Pai",1)
 
     comentario("...",1)
 
     fala("O Sr Thakur, o dono, disse que eu podia mostrar minha demo de Bandersnatch","Stefan")
 
-    fala("Bander-o quê?","Pai",2)
+    fala("Bander-o quê?","Pai",1)
 
     fala("Bandersnatch... É baseado nesse livro.","Stefan",2)
 
-    comentario('Stefan mostra o livro "Bandersnatch" para o pai',2)
+    comentario('Stefan mostra o livro "Bandersnatch" para o pai')
 
     fala("Era da sua mãe?","Pai",1)
 
-    fala("Estava nas coisas dela... :|","Stefan",2)
+    fala("Estava nas coisas dela... :|","Stefan",1)
 
     fala("Mas eu não acho que ela leu :|","Stefan",2)
 
-    fala("Eu acho que não... <:|","Pai",2)
+    fala("Eu acho que não... <:|","Pai",1)
     
-    comentario("Seu pai olha pro livro....",2)
+    comentario("Seu pai olha pro livro....")
 
     fala('"Jerome F Davies"... não deve ser muito bom escritor, você sempre está avançando e voltando este livro O-O',"Pai")
 
-    fala("Não é isso... É por que é interativo, estilo escolha sua aventura :|",1)
+    fala("Não é isso... É por que é interativo, estilo escolha sua aventura :|","Stefan",1)
 
     fala("Ham?","Pai",0.5)
 
