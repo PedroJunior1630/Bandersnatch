@@ -14,12 +14,13 @@ def linha(tipo="=+=",tam=30,cor="\033[1;32m"):
 
 
 def introGame():
-    print("\033[1;32mBandersnatch")
     tempo(1)
+    limpa()
+    print("\033[1;32m")
     print("(c) PedroHDev Productions...")
     tempo(2)
     limpa()
-    print("\033[1;97mInspirado no filme Black Mirror Bandersnatch da Netflix.\033[m")
+    print("Inspirado no filme Black Mirror Bandersnatch da Netflix.\033[m")
     tempo(4)
     limpa()
 
@@ -98,10 +99,20 @@ def comentario(msg,temp=1):
     tempo(temp)
     limpa()
 
+
 def fala(msg,pessoa,cor="\033[1;97m"):
     print(cor)
-    print(f"{pessoa}: {msg}")
+    print(f"{pessoa}: ",end="")
+    for letra in msg:
+        print(f"{letra}",end="")
+        tempo(0.08)
     print("\033[m")
+
+
+def escolha(op1="",op2=""):
+    esp
+    
+    
 
 
 def comecaJogo():
@@ -119,8 +130,13 @@ def comecaJogo():
     # Exbir corredor 
     # Exibir o pai do Stefan
     fala("Café da manhã?","Pai","\033[1;33m")
+    #exibir o stefan
+    fala("Hum","Stefan","\033[1;32m")
     # Exibir uma mesa
     # Exibir o chá
+    fala("Obrigado Pai...","Pai","\033[1;33m")
+    #exbir a mesa
+       
 
 
 def finalizaJogo():
@@ -132,18 +148,18 @@ def mostraSobre():
 
 
 
-tocaMusica("Intro.mp3")
+tocaMusica("Intro8.mp3")
 introGame()
 layoutGame("BANDERSNATCH")
-menu = telaMenu("JOGAR", "FINALIZAR JOGO", "SOBRE")
+menu = telaMenu("JOGAR", "SOBRE", "FINALIZAR GAME")
 
 
 if menu == 1:
     comecaJogo()
 
 elif menu == 2:
-    finalizaJogo()
+    mostraSobre()
 
 elif menu == 3:
-    mostraSobre()
+    finalizaJogo()
 
