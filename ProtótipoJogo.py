@@ -72,6 +72,10 @@ def telaMenu(*opcs):
     while True:
         if keyboard.is_pressed('1'):
             return 1
+        if keyboard.is_pressed('2'):
+            return 2
+        if keyboard.is_pressed('3'):
+            return 3
 
 
 def layoutGame(msg):
