@@ -132,9 +132,9 @@ def fala(msg,pessoa,temp=1.5):
     print("")
 
 
-def escolha(op1="",op2=""):
+def escolha(op1="",op2="",tipo=0):
     import random
-    qntd = 46
+    qntd = 36
     esp = 1
     
     for c in range(0,qntd):
@@ -149,20 +149,22 @@ def escolha(op1="",op2=""):
         if c == 35:
             r = random.randint(1,2)
             if r == 1:
-                print(f"\033[1;32m{op1:>10}\033[m",end = "")
-                print(f"{'|':>15}",end = "")
+                print(f"\033[1;32m{op1:>15}\033[m",end = "")
+                print(f"{'|':>5}",end = "")
                 print(f"{op2:>15}")
             else:
-                print(f"{op1:>10}",end = "")
-                print(f"{'|':>15}",end = "")
+                print(f"{op1:>15}",end = "")
+                print(f"{'|':>5}",end = "")
                 print(f"\033[1;32m{op2:>15}\033[m")
                       
             tempo(5)
 
         else:
-            print(f"{op1:>10}",end = "")
-            print(f"{'|':>15}",end = "")
+            print(f"{op1:>15}",end = "")
+            print(f"{'|':>5}",end = "")
             print(f"{op2:>15}")
+            opc = leiaInt("Digite sua opção: [1] ou [2]")
+            return opc
             tempo(0.2)
             limpa()
 
@@ -260,8 +262,9 @@ def comecaJogo():
 
     fala("Os dois são infantis, mas você insiste...","Pai",1)
 
-    escolha("SUGAR PUFFS","SUCRILHOS")
+    opcoes = escolha("SUGAR PUFFS","SUCRILHOS",1)
 
+    print(f"{opcoes}")
 
     #exbir a mesa
        
