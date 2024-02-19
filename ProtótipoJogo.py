@@ -163,8 +163,6 @@ def escolha(op1="",op2="",tipo=0):
             print(f"{op1:>15}",end = "")
             print(f"{'|':>5}",end = "")
             print(f"{op2:>15}")
-            opc = leiaInt("Digite sua opção: [1] ou [2]")
-            return opc
             tempo(0.2)
             limpa()
 
@@ -185,11 +183,60 @@ def carregando():
     limpa()
 
 
+
+def anima(tipo):
+    if tipo == "relogio":
+        m =  2
+        s =  0
+        while True:
+            if s == 10:
+                s = 0
+                m = 3
+            print(f"""
+            ______________
+            /____________/
+            | 0 8 : {m} {s} |
+            -------------/
+            """)
+            tempo(0.5)
+            limpa()
+            s = s + 1
+            if m == 3:
+                tempo(2)
+                break
+
+
+    elif tipo == "livro":
+        
+    elif tipo == "cereais":
+       print("""
+     _______________     
+    /______________/|
+    |              ||
+    |              ||
+    |              ||
+    | SUGAR PUFFS  ||
+    |              ||
+    |              ||
+    |______________|/
+                        OU       _______________     
+                                /______________/|           
+                                |              ||
+                                |              ||
+                                |              ||
+                                |   FROSTIES   ||
+                                |              ||
+                                |              ||
+                                |______________|/ 
+    """)
+
+
 def comecaJogo():
     tempo(1)
     limpa()
     carregando()
     tocaMusica("relax.mp3")
+    anima("relogio")
     comentario("9 de Julho de 1984",2)
     # Data 9/07/1984
     # Quarto do stefan
@@ -197,7 +244,7 @@ def comecaJogo():
     comentario("Stefan acorda as 08:30 e se dirige ao banheiro para tomar seu remédio.",5)
     limpa()
     # Remédio(Pilulas)
-    comentario("Stefan tome suas pilulas e lava seu rosto.",5)
+    comentario("Stefan toma suas pilulas e lava seu rosto.",5)
     limpa()
     # Exbir corredor 
     # Exibir o pai do Stefan
@@ -236,6 +283,8 @@ def comecaJogo():
 
     comentario('Stefan mostra o livro "Bandersnatch" para o pai')
 
+    anima("livro")
+
     fala("Era da sua mãe?","Pai",1)
 
     fala("Estava nas coisas dela... :|","Stefan",1)
@@ -258,7 +307,9 @@ def comecaJogo():
 
     fala("Que tal decidir o que quer de café da manhã?","Pai",1)
 
-    comentario("Seu pai te mostra duas caixas de cereais...",1)
+    comentario("Seu pai abre o armário e te mostra duas caixas de cereais...",1)
+
+    anima("cereais")
 
     fala("Os dois são infantis, mas você insiste...","Pai",1)
 
