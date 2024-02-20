@@ -207,7 +207,21 @@ def anima(tipo):
 
 
     elif tipo == "livro":
-        
+        print("""
+      ______________________
+     / \____________________/ 
+     |  |                   |
+     |  |                   |
+     |  |                   |
+     |  |                   |
+     |  |   BANDERSNATCH    |
+     |  |                   |
+     |  |                   |
+     |  |                   |
+     |  | ~Jerome F Davies  |
+      \ |                   |
+       \--------------------|
+    """)
     elif tipo == "cereais":
        print("""
      _______________     
