@@ -205,6 +205,7 @@ def anima(tipo):
                 tempo(2)
                 break
 
+    elif tipo == "pilula":
 
     elif tipo == "livro":
         print("""
@@ -259,6 +260,8 @@ def comecaJogo():
     limpa()
     # Remédio(Pilulas)
     comentario("Stefan toma suas pilulas e lava seu rosto.",5)
+    anima("pilula")
+    
     limpa()
     # Exbir corredor 
     # Exibir o pai do Stefan
