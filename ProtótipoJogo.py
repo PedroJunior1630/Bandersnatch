@@ -152,11 +152,33 @@ def escolha(op1="",op2="",tipo=0):
                 print(f"\033[1;32m{op1:>15}\033[m",end = "")
                 print(f"{'|':>5}",end = "")
                 print(f"{op2:>15}")
+                print("""
+                 _______________     
+                /______________/|
+                |              ||
+                |              ||
+                |              ||
+                | SUGAR PUFFS  ||
+                |              ||
+                |              ||
+                |______________|/
+                      .
+                    """)
             else:
                 print(f"{op1:>15}",end = "")
                 print(f"{'|':>5}",end = "")
                 print(f"\033[1;32m{op2:>15}\033[m")
-                      
+                print("""
+                 _______________     
+                /______________/|           
+                |              ||
+                |              ||
+                |              ||
+                |   FROSTIES   ||
+                |              ||
+                |              ||
+                |______________|/ 
+                """)
             tempo(5)
 
         else:
@@ -185,6 +207,7 @@ def carregando():
 
 
 def anima(tipo):
+    print("\033[1;97m")
     if tipo == "relogio":
         m =  2
         s =  0
@@ -202,11 +225,36 @@ def anima(tipo):
             limpa()
             s = s + 1
             if m == 3:
-                tempo(2)
+                print("BIIIPP!!!!")
+                tempo(3)
                 break
 
     elif tipo == "pilula":
+        print("""
+           ________
+          /        \ 
+          | PILLS  |
+           \______/
+            |    |
+            |    |
+            |    |
+            |    |
+            \____/
+        """)
+        tempo(1.5)
+        limpa()
+        print("""
+            ____
+           /    |
+          /----/
+         / ++ /
+        /----/
+       /    /
+       \___/
+        """)
+        tempo(1.5)
 
+        
     elif tipo == "livro":
         print("""
       ______________________
@@ -223,6 +271,7 @@ def anima(tipo):
       \ |                   |
        \--------------------|
     """)
+        
     elif tipo == "cereais":
        print("""
      _______________     
@@ -243,8 +292,18 @@ def anima(tipo):
                                 |              ||
                                 |              ||
                                 |______________|/ 
+             
     """)
 
+    elif tipo == "cha":
+        print("""
+            ~~~~~~~~~
+           /___________\ 
+           |           |>
+           \   CHÁ    /
+            \________/   
+        """)
+    print("\033[m")
 
 def comecaJogo():
     tempo(1)
@@ -277,6 +336,8 @@ def comecaJogo():
     comentario("Stefan está lendo seu livro sentado na mesa da cozinha.")
 
     fala("Aqui está seu chá...","Pai",1)
+    anima("cha")
+
     comentario("...",1)
     fala("Obrigado Pai...","Pai",1)
 
@@ -311,6 +372,7 @@ def comecaJogo():
     fala("Eu acho que não... <:|","Pai",1)
     
     comentario("Seu pai olha pro livro....")
+    anima("livro")
 
     fala('"Jerome F Davies"... não deve ser muito bom escritor, você sempre está avançando e voltando este livro O-O',"Pai")
 
