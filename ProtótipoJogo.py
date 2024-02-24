@@ -5,7 +5,7 @@ def tempo(seg=1):
 
 def limpa():
     import os
-    os.system('cls' if os.name == "nt"  else "clear")
+    os.system("cls" if os.name == "nt" else "clear")
 
 
 def linha(tipo="=+=",tam=30,cor="\033[1;32m"):
@@ -132,7 +132,7 @@ def fala(msg,pessoa,temp=1.5):
     print("")
 
 
-def escolha(op1="",op2="",tipo=0):
+def escolha(op1="",op2="",tipo1="nda",tipo2="nda"):
     import random
     qntd = 36
     esp = 1
@@ -152,33 +152,13 @@ def escolha(op1="",op2="",tipo=0):
                 print(f"\033[1;32m{op1:>15}\033[m",end = "")
                 print(f"{'|':>5}",end = "")
                 print(f"{op2:>15}")
-                print("""
-                 _______________     
-                /______________/|
-                |              ||
-                |              ||
-                |              ||
-                | SUGAR PUFFS  ||
-                |              ||
-                |              ||
-                |______________|/
-                      .
-                    """)
+                anima(tipo1)
+                
             else:
                 print(f"{op1:>15}",end = "")
                 print(f"{'|':>5}",end = "")
                 print(f"\033[1;32m{op2:>15}\033[m")
-                print("""
-                 _______________     
-                /______________/|           
-                |              ||
-                |              ||
-                |              ||
-                |   FROSTIES   ||
-                |              ||
-                |              ||
-                |______________|/ 
-                """)
+                anima(tipo2)
             tempo(5)
 
         else:
@@ -294,6 +274,31 @@ def anima(tipo):
                                 |______________|/ 
              
     """)
+    elif tipo == "cereal1":
+        print("""
+            _______________     
+        /______________/|
+        |              ||
+        |              ||
+        |              ||
+        | SUGAR PUFFS  ||
+        |              ||
+        |              ||
+        |______________|/
+        """)
+
+    elif tipo == "cereal2":
+        print("""
+         _______________     
+        /______________/|           
+        |              ||
+        |              ||
+        |              ||
+        |   FROSTIES   ||
+        |              ||
+        |              ||
+        |______________|/ 
+        """)
 
     elif tipo == "cha":
         print("""
@@ -392,7 +397,7 @@ def comecaJogo():
 
     fala("Os dois são infantis, mas você insiste...","Pai",1)
 
-    opcoes = escolha("SUGAR PUFFS","SUCRILHOS",1)
+    opcoes = escolha("SUGAR PUFFS","SUCRILHOS",1,"cereal1","cereal2")
 
     print(f"{opcoes}")
 
