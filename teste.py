@@ -2,14 +2,20 @@ i = 0
 def limpa():
     import os
     os.system("cls" if os.name == "nt" else "clear")
-while i <= 60:
-    import keyboard
+
+
+def tempo(seg=1):
     from time import sleep
-    i += 1
-    print(f"{'OLA':>15}",end = "")
-    print(f"{'|':>5}",end = "")
-    print(f"{'ola':>15}")
-    sleep(0.4)
-    limpa()
-    if keyboard.is_pressed('1'):
-        break
+    sleep(seg)
+
+def pensamento(msg,pessoa,temp=1.5):
+    linha("~~",40,"\033[1;97m")
+    print(f"\033[1;97m{pessoa}: \033[m",end="")
+    for letra in msg:
+        print(f"{letra}",end="")
+        tempo(0.06)
+    print("\033[m")
+    tempo(temp)
+    linha("~~",40,"\033[1;97m")
+    print("\033[m")
+

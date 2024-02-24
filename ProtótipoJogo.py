@@ -140,6 +140,18 @@ def fala(msg,pessoa,temp=1.5):
     print("")
 
 
+def pensamento(msg,pessoa,temp=1.5):
+    linha("~~",40,"\033[1;97m")
+    print(f"\033[1;97m{pessoa}: \033[m",end="")
+    for letra in msg:
+        print(f"{letra}",end="")
+        tempo(0.06)
+    print("\033[m")
+    tempo(temp)
+    linha("~~",40,"\033[1;97m")
+    print("\033[m")
+
+
 def escolha(op1="",op2="",tipo1="nda",tipo2="nda"):
     import random
     import keyboard
@@ -321,6 +333,7 @@ def anima(tipo):
         """)
     print("\033[m")
 
+
 def comecaJogo():
     tempo(1)
     limpa()
@@ -412,10 +425,36 @@ def comecaJogo():
 
     opcoes = escolha("SUGAR PUFFS","SUCRILHOS","cereal1","cereal2")
 
-    print(f"{opcoes}")
+    comentario("Seu pai coloca o cereal na mesa",1)
 
-    #exbir a mesa
-       
+    anima(f"cereal{opcoes}")
+
+    limpa()
+
+    #anima("Janela")
+    #tocaMusica("TocToc.mp3")
+    print("TOC TOC!!!")
+    tempo(0.2)
+
+    comentario("SEU PAI BATE NA JANELA E MANDA O CACHORRO SAIR DO QUINTAL")
+
+    fala("VAI PRA SUA CASA!!!","Pai",1)
+
+    fala("É aquele maldito cachorro do vizinho!... >:|","Pai",1)
+
+    fala("Ele vai acabar com a gente... :|","Pai",1)
+
+    comentario("Stefan se dirige ao ponto de ônibus para ir a sede da Tuckersoft")
+    #anima parada
+    limpa()
+
+    comentario("Stefan pega o ônibus")
+    #anima onibus
+    #anima rua
+    pensamento("Acho melhor ouvir uma musica enquanto chego lá...","Stefan",2)
+
+    escolha("Thompson Twins","Now2","msc1","mcs2")
+
 
 
 def finalizaJogo():
