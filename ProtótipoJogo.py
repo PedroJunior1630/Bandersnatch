@@ -53,6 +53,14 @@ def leiaInt(msg):
             return a
 
 
+def aviso():
+    linha("=-=",30,"\033[1;33m")
+    print("ESTEJA PREPARADO PARA PRESSIONAR '1' OU '2' NO TECLADO PARA ESCOLHER AS OPÇÕES")
+    linha("=-=",30,"\033[1;33m")
+    print("\033[m")
+    tempo(3)
+
+
 def telaMenu(*opcs):
     import keyboard
     print(f"""
@@ -134,6 +142,7 @@ def fala(msg,pessoa,temp=1.5):
 
 def escolha(op1="",op2="",tipo1="nda",tipo2="nda"):
     import random
+    import keyboard
     qntd = 36
     esp = 1
     
@@ -167,6 +176,8 @@ def escolha(op1="",op2="",tipo1="nda",tipo2="nda"):
             print(f"{op2:>15}")
             tempo(0.2)
             limpa()
+            if keyboard.is_pressed('1'):
+                return 1
 
 
 def carregando():
@@ -276,7 +287,7 @@ def anima(tipo):
     """)
     elif tipo == "cereal1":
         print("""
-            _______________     
+        _______________     
         /______________/|
         |              ||
         |              ||
@@ -397,7 +408,9 @@ def comecaJogo():
 
     fala("Os dois são infantis, mas você insiste...","Pai",1)
 
-    opcoes = escolha("SUGAR PUFFS","SUCRILHOS",1,"cereal1","cereal2")
+    aviso()
+
+    opcoes = escolha("SUGAR PUFFS","SUCRILHOS","cereal1","cereal2")
 
     print(f"{opcoes}")
 
