@@ -5,7 +5,7 @@
 - Ascii Art;
 - Uso de python.
 ---
-*Jogo oficial irá conter:*
+*Jogo oficial está neste [repositório](https://github.com/PedroJunior1630/BandersnatchOficial.git):*
 - Gênero: Suspense & Mistério;
 - Interatividade;
 - Tipo 2D;
