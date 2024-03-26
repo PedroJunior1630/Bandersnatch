@@ -423,11 +423,11 @@ def comecaJogo():
 
     aviso()
 
-    opcoes = escolha("SUGAR PUFFS","SUCRILHOS","cereal1","cereal2")
+    opc1 = escolha("SUGAR PUFFS","SUCRILHOS","cereal1","cereal2")
 
     comentario("Seu pai coloca o cereal na mesa",1)
 
-    anima(f"cereal{opcoes}")
+    anima(f"cereal{opc1}")
 
     limpa()
 
@@ -453,9 +453,9 @@ def comecaJogo():
     #anima rua
     pensamento("Acho melhor ouvir uma musica enquanto chego lá...","Stefan",2)
 
-    escolha("Thompson Twins","Now2","msc1","mcs2")
+    opc2 = escolha("Thompson T","NOW 2","msc1","mcs2")
 
-
+    
 
 def finalizaJogo():
     pass
