@@ -556,6 +556,7 @@ def comecaJogo():
     tempo(2)
     anima("predio")
 
+    
 def finalizaJogo():
     pass
 
