@@ -27,7 +27,15 @@ def pensamento(msg,pessoa,temp=1.5):
     linha("~~",40,"\033[1;97m")
     print("\033[m")
 
-print("OLÀ")
-tempo(1)
-limpa()
-pensamento("Acho melhor ouvir uma musica enquanto chego lá...","Stefan",2)
+qntd = 40
+while qntd > 0:
+    c =  " " * qntd
+    print(c,"                        __")
+    print(c," .-----------------------'  |")
+    print(c,"/| _ .---. .---. .---. .---.|")
+    print(c,"|j||||___| |___| |___| |___||")
+    print(c,"|=|||=======================|")
+    print(c,"[_|j||(O)\__________|(O)\___]")
+    tempo(0.1)
+    limpa()
+    qntd -= 1

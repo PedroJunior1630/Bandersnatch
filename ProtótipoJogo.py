@@ -430,6 +430,7 @@ def comecaJogo():
     comentario("Seu pai coloca o cereal na mesa",1)
 
     anima(f"cereal{opc1}")
+    tempo(3)
 
     limpa()
 
@@ -452,17 +453,34 @@ def comecaJogo():
     limpa()
 
     comentario("Stefan pega o ônibus")
+    qntd = 30
+
+    while qntd > 0:
+        c =  " " * qntd
+        print(c,"                        __")
+        print(c," .-----------------------'  |")
+        print(c,"/| _ .---. .---. .---. .---.|")
+        print(c,"|j||||___| |___| |___| |___||")
+        print(c,"|=|||=======================|")
+        print(c,"[_|j||(O)\__________|(O)\___]")
+        tempo(0.2)
+        limpa()
+        qntd -= 1
+
     #anima onibus
     #anima rua
     pensamento("Acho melhor ouvir uma musica enquanto chego lá...","Stefan",2)
 
     opc2 = escolha("Thompson T","NOW 2","msc1","mcs2")
 
-    if opc2 == 2:
-        tocaMusica("Thompson T")
+    if opc2 == 1:
+        tocaMusica("thompson.mp3")
     else:
-        tocaMusica("NOW2")
+        tocaMusica("Now2.mp3")
 
+    tempo(3)
+    print("TESTANDO")
+    tempo(3)
 
 def finalizaJogo():
     pass
