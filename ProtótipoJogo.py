@@ -190,6 +190,8 @@ def escolha(op1="",op2="",tipo1="nda",tipo2="nda"):
             limpa()
             if keyboard.is_pressed('1'):
                 return 1
+            if keyboard.is_pressed('2'):
+                return 2
 
 
 def carregando():
@@ -433,6 +435,7 @@ def comecaJogo():
 
     #anima("Janela")
     #tocaMusica("TocToc.mp3")
+    
     print("TOC TOC!!!")
     tempo(0.2)
 
@@ -455,7 +458,11 @@ def comecaJogo():
 
     opc2 = escolha("Thompson T","NOW 2","msc1","mcs2")
 
-    
+    if opc2 == 2:
+        tocaMusica("Thompson T")
+    else:
+        tocaMusica("NOW2")
+
 
 def finalizaJogo():
     pass
