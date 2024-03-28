@@ -347,6 +347,19 @@ def anima(tipo):
                     |___/_._o________o_._\___| 
         """)
 
+    elif tipo == "predio":
+        print("""
+             ________________________________________
+            /_____________________________________/ |
+            |             TUCKERSOFT              | |
+            |-------------------------------------| |
+            |                                     | |
+            |  []      []       []      []        | |
+            |                                     | |
+            |  []      []       []      []        | |
+            |                                     | |
+            |                                     |/
+        """)
     elif tipo == "cha":
         print("""
             ~~~~~~~~~
@@ -474,8 +487,55 @@ def comecaJogo():
     #anima parada
     limpa()
 
-    comentario("Stefan pega o ônibus"
-               
+    comentario("Stefan pega o ônibus")
+    print("                        __")
+    print(" .-----------------------'  |")
+    print("/| _ .---. .---. .---. .---.|")
+    print("|j||||___| |___| |___| |___||")
+    print("|=|||=======================|")
+    print("[_|j||(O)\__________|(O)\___]")
+    
+    pensamento("Acho melhor ouvir uma musica enquanto chego lá...","Stefan",2)
+    anima("fitas")
+    tempo(3)
+    comentario("Mas qual....")
+    tempo(2)
+
+    opc2 = escolha("Thompson T","NOW 2","msc1","mcs2")
+
+    if opc2 == 1:
+        print("""
+        .------------------------.
+        |  ////////  THOMPSON T  |
+        | //  __  ______  __     |
+        |    /  \|\.....|/  \    |
+        |    \__/|/_____|\__/    |                                                
+        |                        |                                                
+        |    ________________    |                                                
+        |___/_._o________o_._\___| 
+        """)
+        tempo(2)
+        limpa()
+        tocaMusica("thompson.mp3")
+        
+
+        
+    else:
+        print("""
+        .------------------------.
+        |  ////////       NOW 2  |
+        | //  __  ______  __     |
+        |    /  \|\.....|/  \    |
+        |    \__/|/_____|\__/    |                                                
+        |                        |                                                
+        |    ________________    |                                                
+        |___/_._o________o_._\___| 
+        """)
+        tempo(2)
+        limpa()
+        tocaMusica("Now2.mp3")
+        
+
     qntd = 40
 
     while qntd > 0:
@@ -486,24 +546,15 @@ def comecaJogo():
         print(c,"|j||||___| |___| |___| |___||")
         print(c,"|=|||=======================|")
         print(c,"[_|j||(O)\__________|(O)\___]")
-        tempo(0.1)
+        tempo(0.2)
         limpa()
         qntd -= 1
 
-    #anima onibus
-    #anima rua
-    pensamento("Acho melhor ouvir uma musica enquanto chego lá...","Stefan",2)
-    anima("fitas")
-    opc2 = escolha("Thompson T","NOW 2","msc1","mcs2")
-
-    if opc2 == 1:
-        tocaMusica("thompson.mp3")
-    else:
-        tocaMusica("Now2.mp3")
-
-    tempo(3)
-    print("TESTANDO")
-    tempo(3)
+    limpa()
+    tempo(1)
+    comentario("Stefan chega ao prédio da Tuckersoft")
+    tempo(2)
+    anima("predio")
 
 def finalizaJogo():
     pass
