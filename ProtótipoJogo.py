@@ -335,6 +335,9 @@ def anima(tipo):
         """)
     print("\033[m")
 
+    elif tipo == "fitas":
+        pass
+
 
 def comecaJogo():
     tempo(1)
@@ -453,7 +456,7 @@ def comecaJogo():
     limpa()
 
     comentario("Stefan pega o ônibus")
-    qntd = 30
+    qntd = 40
 
     while qntd > 0:
         c =  " " * qntd
@@ -463,14 +466,14 @@ def comecaJogo():
         print(c,"|j||||___| |___| |___| |___||")
         print(c,"|=|||=======================|")
         print(c,"[_|j||(O)\__________|(O)\___]")
-        tempo(0.2)
+        tempo(0.1)
         limpa()
         qntd -= 1
 
     #anima onibus
     #anima rua
     pensamento("Acho melhor ouvir uma musica enquanto chego lá...","Stefan",2)
-
+    anima("fitas")
     opc2 = escolha("Thompson T","NOW 2","msc1","mcs2")
 
     if opc2 == 1:
