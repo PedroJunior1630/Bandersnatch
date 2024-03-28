@@ -325,6 +325,28 @@ def anima(tipo):
         |______________|/ 
         """)
 
+    elif tipo == "fitas":
+        print("""
+        .------------------------.
+        |  ////////       NOW 2  |
+        | //  __  ______  __     |
+        |    /  \|\.....|/  \    |
+        |    \__/|/_____|\__/    |                                                
+        |                        |                                                
+        |    ________________    |                                                
+        |___/_._o________o_._\___| 
+        """)
+        print("""
+                    .------------------------.
+                    |  ////////  THOMPSON T  |
+                    | //  __  ______  __     |
+                    |    /  \|\.....|/  \    |
+                    |    \__/|/_____|\__/    |                                                
+                    |                        |                                                
+                    |    ________________    |                                                
+                    |___/_._o________o_._\___| 
+        """)
+
     elif tipo == "cha":
         print("""
             ~~~~~~~~~
@@ -334,9 +356,6 @@ def anima(tipo):
             \________/   
         """)
     print("\033[m")
-
-    elif tipo == "fitas":
-        pass
 
 
 def comecaJogo():
@@ -455,7 +474,8 @@ def comecaJogo():
     #anima parada
     limpa()
 
-    comentario("Stefan pega o ônibus")
+    comentario("Stefan pega o ônibus"
+               
     qntd = 40
 
     while qntd > 0:
