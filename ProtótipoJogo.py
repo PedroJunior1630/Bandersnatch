@@ -130,6 +130,8 @@ def fala(msg,pessoa,temp=1.5):
         cor = "\033[1;33m"
     elif pessoa.upper() == "STEFAN":
         cor = "\033[1;32m"
+    else:
+        cor = "\033[1;33m"
 
     print(cor,end= "")
     for letra in msg:
@@ -555,8 +557,61 @@ def comecaJogo():
     comentario("Stefan chega ao prédio da Tuckersoft")
     tempo(2)
     anima("predio")
+    
+    comentario("Stefan anda em direção ao prédio e entra nele.")
+    tempo(5)
+
+    limpa()
+
+    comentario("Stefan entra na sala da Tuckersoft")
+    tempo(3)
+
+    limpa()
+
+    comentario("Takuro passa pelo corredor e vê o estgiário")
+    tempo(2)
+
+    fala("Ah maravilha, me traz uns cigarros e uma barra de chocolate","Sr Tackuro")
+
+    comentario("Tackuro olha e vê Stefan...")
+
+    fala("Ah.... Você é o Steven!","Sr Tackuro")
+
+    fala("É stefan...","Stefan")
+
+    fala("Stefan, desculpe... =D","Sr Tackuro")
+
+    fala("Tudo bem, todo mundo sempre confunde... :|","Stefan")
+
+    fala("Desculpe a bagunça, a gente se mudou na segunda!","Sr Tackuro")
+
+    fala("É bem grande o prédio.","Stefan")
+    
+    fala("Pois é, expansão, esse é o meu plano, imagina só, uma equipe inteira para o gráficos, outra para jogabilidade... e assim por diante.")
+
+    comentario("Stefan olha a parede e vê um post de lançamento de um jogo")
+
+    fala("É o novo do Colin...","Sr Tackuro")
+
+    limpa()
+
+    fala("Olha ele ali!","Sr Thackuro")
+
+    fala("Que loucura, eu joguei todos os jogos dele! :O","Stefan")
+    
+    fala("Vamo ali dar um oi","Sr Thackuro")
+
+    fala("Não tem problema não?","Stefan")
+
+    fala("Nann que bobagem vamos :D","Sr Thackuro")
+
+    comentario("Stefan e Sr Thackuro vão a mesa do Colin")
+
+    tempo(4)
 
     
+    
+
 def finalizaJogo():
     pass
 
